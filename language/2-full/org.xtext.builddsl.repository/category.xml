@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <bundle id="org.xtext.builddsl" version="1.0.0.qualifier">
+      <category name="builddsl"/>
+   </bundle>
+   <bundle id="org.xtext.builddsl.lib" version="1.0.0.qualifier">
+      <category name="builddsl"/>
+   </bundle>
+   <bundle id="org.xtext.builddsl.ui" version="1.0.0.qualifier">
+      <category name="builddsl"/>
+   </bundle>
+   <category-def name="builddsl" label="Build DSL"/>
+</site>

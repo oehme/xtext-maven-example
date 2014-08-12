@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>org.xtext.builddsl</artifactId>
+	<packaging>eclipse-plugin</packaging>
+
+	<parent>
+		<groupId>org.xtext.builddsl</groupId>
+		<artifactId>org.xtext.builddsl.parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../org.xtext.builddsl.parent/pom.xml</relativePath>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.xtext.builddsl.lib</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -1,0 +1,38 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'org.xtext:xtext-gradle-plugin:0.0.+'
+    classpath 'org.xtend:xtend-gradle-plugin:0.1.+'
+  }
+}
+
+apply plugin: 'xtend'
+apply plugin: 'xtext'
+
+repositories {
+  //replace this with your company repo
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.6.+'
+  compile 'org.xtext.builddsl:org.xtext.builddsl.lib:1.0.0-SNAPSHOT'
+  xtextTooling 'org.xtext.builddsl:org.xtext.builddsl:1.0.0-SNAPSHOT'
+}
+
+xtext {
+  version = '2.6.+'
+  languages{
+    builddsl {
+      setup = 'org.xtext.builddsl.BuildDSLStandaloneSetup'
+      consumesJava = true
+      output {
+        dir = 'build/builddsl'
+        producesJavaFor sourceSets.main
+      }
+    }
+  }
+}
