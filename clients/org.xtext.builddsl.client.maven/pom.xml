@@ -10,6 +10,12 @@
 			<artifactId>org.xtext.builddsl.lib</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
