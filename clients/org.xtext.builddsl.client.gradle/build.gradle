@@ -18,13 +18,13 @@ repositories {
 }
 
 dependencies {
-  compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.6.+'
+  compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.7.+'
   compile 'org.xtext.builddsl:org.xtext.builddsl.lib:1.0.0-SNAPSHOT'
   xtextTooling 'org.xtext.builddsl:org.xtext.builddsl:1.0.0-SNAPSHOT'
 }
 
 xtext {
-  version = '2.6.+'
+  version = '2.7.+'
   languages{
     builddsl {
       setup = 'org.xtext.builddsl.BuildDSLStandaloneSetup'
