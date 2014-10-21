@@ -1,15 +1,7 @@
-buildscript {
-  repositories {
-    mavenCentral()
-  }
-  dependencies {
-    classpath 'org.xtext:xtext-gradle-plugin:0.0.+'
-    classpath 'org.xtend:xtend-gradle-plugin:0.1.+'
-  }
+plugins {
+	id 'org.xtend.xtend' version '0.3+'
+	id 'org.xtext.xtext' version '0.1+'
 }
-
-apply plugin: 'xtend'
-apply plugin: 'xtext'
 
 repositories {
   //replace this with your company repo
