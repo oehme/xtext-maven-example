@@ -1,0 +1,31 @@
+import static org.xtext.builddsl.lib.JavaCompiler.*
+import static extension org.xtext.builddsl.lib.DirectoryCleaner.*
+
+param project 	= 'example-project'.file
+param source 	= project/ 'src'
+param target 	= project/'target'
+param jar 		= project/'result'/'foo.jar'
+
+task Jar depends Compile {
+	target.zip(jar)
+}
+
+task Compile depends Clean {
+	javac [
+		sources += source
+		destination = target
+	]
+}
+
+task Run depends Jar {
+  Helper.helpMe
+	val classpath = newClasspath(jar)
+	val clazz = classpath.loadClass("helloworld.HelloWorld")
+	clazz.runMain
+}
+
+task Clean {
+	target.deleteDirectoryContents
+	jar.delete
+}
+
