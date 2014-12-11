@@ -6,7 +6,5 @@
 	<classpathentry kind="src" path="src-gen"/>
 	<classpathentry kind="src" path="xtend-gen"/>
 	<classpathentry kind="src" path="testdata"/>
-	<classpathentry kind="src" path="inputs"/>
-	<classpathentry kind="src" path="builddsl-gen"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
