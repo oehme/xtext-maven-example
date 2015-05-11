@@ -8,6 +8,8 @@
 package org.xtext.builddsl.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.builder.EclipseOutputConfigurationProvider;
+import org.eclipse.xtext.generator.IContextualOutputConfigurationProvider;
 
 /**
  * Use this class to register components to be used within the IDE.
@@ -15,5 +17,9 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 public class BuildDSLUiModule extends org.xtext.builddsl.ui.AbstractBuildDSLUiModule {
 	public BuildDSLUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
+	}
+	
+	public Class<? extends IContextualOutputConfigurationProvider> bindIContextualOutputConfigurationProvider() {
+		return EclipseOutputConfigurationProvider.class;
 	}
 }

@@ -1,6 +1,6 @@
 plugins {
 	id 'org.xtend.xtend' version '0.4.7'
-	id 'org.xtext.xtext' version '0.3.15'
+	id 'org.xtext.xtext' version '0.3.16'
 }
 
 repositories {
