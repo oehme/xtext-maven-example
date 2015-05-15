@@ -10,35 +10,18 @@
 			<artifactId>org.xtext.builddsl.lib</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+    </dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.8</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>add-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>target/builddsl</source>
-							</sources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
@@ -49,7 +32,6 @@
 							<goal>compile</goal>
 							<goal>testCompile</goal>
 							<goal>xtend-install-debug-info</goal>
-
 						</goals>
 					</execution>
 				</executions>
@@ -70,7 +52,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<classPathLookupFilter>.*builddsl.*</classPathLookupFilter>
 					<languages>
 						<language>
 							<setup>org.xtext.builddsl.BuildDSLStandaloneSetup</setup>
@@ -81,6 +62,7 @@
 							</outputConfigurations>
 						</language>
 					</languages>
+					<classPathLookupFilter>.*builddsl.*</classPathLookupFilter>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -89,6 +71,23 @@
 						<version>1.0.0-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>target/builddsl</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
